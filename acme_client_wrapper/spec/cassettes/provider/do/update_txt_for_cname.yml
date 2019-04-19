@@ -1,0 +1,230 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/domains?page=1&per_page=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer abc
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 17 Apr 2019 16:29:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d860da4cf760bdf38f43bfa1350e49fb91555518587; expires=Thu, 16-Apr-20
+        16:29:47 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"621e1a4651033b964aa5852b83a9481a"
+      Ratelimit-Limit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4990'
+      Ratelimit-Reset:
+      - '1555515468'
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gateway:
+      - Edge-Gateway
+      X-Request-Id:
+      - 91dc52e2-09ba-4b79-a63a-4a61d717255e
+      X-Response-From:
+      - service
+      X-Runtime:
+      - '0.079724'
+      X-Xss-Protection:
+      - 1; mode=block
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4c8fc7a2fdfac5ee-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"domains":[{"name":"blog.subdomainishostnameorfqdn.com","ttl":1800,"zone_file":"$ORIGIN
+        blog.subdomainishostnameorfqdn.com.\n$TTL 1800\nblog.subdomainishostnameorfqdn.com. IN SOA ns1.digitalocean.com.
+        hostmaster.blog.subdomainishostnameorfqdn.com. 1555510779 10800 3600 604800 1800\nblog.subdomainishostnameorfqdn.com.
+        1800 IN NS ns1.digitalocean.com.\nblog.subdomainishostnameorfqdn.com. 1800 IN NS ns2.digitalocean.com.\n_acme-challenge.blog.subdomainishostnameorfqdn.com.
+        1800 IN TXT P94nI4FoH-zUrFUGSzLq5l05KKaxiM0TabMeBVXgwwM\n"},{"name":"somerandomdomain.com","ttl":1800,"zone_file":"$ORIGIN
+        somerandomdomain.com.\n$TTL 1800\nsomerandomdomain.com. IN SOA ns1.digitalocean.com.
+        hostmaster.somerandomdomain.com. 1555114709 10800 3600 604800 1800\nsomerandomdomain.com.
+        1800 IN NS ns1.digitalocean.com.\nsomerandomdomain.com. 1800 IN NS ns2.digitalocean.com.\nsomerandomdomain.com.
+        1800 IN NS ns3.digitalocean.com.\nwww.invalidchallenge.com. 3600 IN A 134.209.87.35\n"},{"name":"subdomainishostnameorfqdn.com","ttl":1800,"zone_file":"$ORIGIN
+        subdomainishostnameorfqdn.com.\n$TTL 1800\nsubdomainishostnameorfqdn.com. IN SOA ns1.digitalocean.com. hostmaster.subdomainishostnameorfqdn.com.
+        1555505809 10800 3600 604800 1800\nsubdomainishostnameorfqdn.com. 1800 IN NS ns1.digitalocean.com.\nsubdomainishostnameorfqdn.com.
+        1800 IN NS ns2.digitalocean.com.\nsubdomainishostnameorfqdn.com. 1800 IN NS ns3.digitalocean.com.\nwww.subdomainishostnameorfqdn.com.
+        3600 IN A 134.209.87.35\nsubdomainishostnameorfqdn.com. 3600 IN A 134.209.87.35\n_acme-challenge.subdomainishostnameorfqdn.com.
+        1800 IN TXT P94nI4FoH-zUrFUGSzLq5l05KKaxiM0TabMeBVXgwwM\n"},{"name":"apex.com","ttl":1800,"zone_file":"$ORIGIN
+        apex.com.\n$TTL 1800\napex.com. IN SOA ns1.digitalocean.com. hostmaster.apex.com.
+        1555518586 10800 3600 604800 1800\napex.com. 1800 IN NS ns1.digitalocean.com.\napex.com.
+        1800 IN NS ns2.digitalocean.com.\napex.com. 1800 IN NS ns3.digitalocean.com.\nwww.cname.com.
+        120 IN CNAME apex.com.\napex.com. 120 IN A 134.209.87.35\n_acme-challenge.apex.com.
+        1800 IN TXT P94nI4FoH-zUrFUGSzLq5l05KKaxiM0TabMeBVXgwwM\n"},{"name":"txtrecordexists.com","ttl":1800,"zone_file":"$ORIGIN
+        txtrecordexists.com.\n$TTL 1800\ntxtrecordexists.com. IN SOA ns1.digitalocean.com. hostmaster.txtrecordexists.com.
+        1555515547 10800 3600 604800 1800\ntxtrecordexists.com. 1800 IN NS ns1.digitalocean.com.\ntxtrecordexists.com.
+        1800 IN NS ns2.digitalocean.com.\ntxtrecordexists.com. 1800 IN NS ns3.digitalocean.com.\n_acme-challenge.txtrecordexists.com.
+        1800 IN TXT K5KaxiM0T-zUrFUGSzLq5l0P94nI4FoHabMeBVXgwwM\ntxtrecordexists.com. 3600
+        IN CAA 0 issue \"letsencrypt.com\"\ntxtrecordexists.com. 3600 IN A 134.209.87.35\n"}],"links":{},"meta":{"total":5}}'
+    http_version: 
+  recorded_at: Wed, 17 Apr 2019 16:29:47 GMT
+- request:
+    method: get
+    uri: https://api.digitalocean.com/v2/domains/apex.com/records?page=1&per_page=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer abc
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 17 Apr 2019 16:29:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d089e1e676fe853971f67b64ee2257fb61555518587; expires=Thu, 16-Apr-20
+        16:29:47 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"bd2334adf394a72b24ff1444d70c1c34"
+      Ratelimit-Limit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4989'
+      Ratelimit-Reset:
+      - '1555515468'
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gateway:
+      - Edge-Gateway
+      X-Request-Id:
+      - 2b02f8bf-d06a-437d-aecd-a6334c283b1b
+      X-Response-From:
+      - service
+      X-Runtime:
+      - '0.086709'
+      X-Xss-Protection:
+      - 1; mode=block
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4c8fc7a45ceacccc-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"domain_records":[{"id":69235131,"type":"NS","name":"@","data":"ns1.digitalocean.com","priority":null,"port":null,"ttl":1800,"weight":null,"flags":null,"tag":null},{"id":69235132,"type":"NS","name":"@","data":"ns2.digitalocean.com","priority":null,"port":null,"ttl":1800,"weight":null,"flags":null,"tag":null},{"id":69235133,"type":"NS","name":"@","data":"ns3.digitalocean.com","priority":null,"port":null,"ttl":1800,"weight":null,"flags":null,"tag":null},{"id":69235214,"type":"CNAME","name":"www","data":"@","priority":null,"port":null,"ttl":120,"weight":null,"flags":null,"tag":null},{"id":69235448,"type":"A","name":"@","data":"134.209.87.35","priority":null,"port":null,"ttl":120,"weight":null,"flags":null,"tag":null},{"id":69358909,"type":"TXT","name":"_acme-challenge","data":"P94nI4FoH-zUrFUGSzLq5l05KKaxiM0TabMeBVXgwwM","priority":null,"port":null,"ttl":1800,"weight":null,"flags":null,"tag":null}],"links":{},"meta":{"total":6}}'
+    http_version: 
+  recorded_at: Wed, 17 Apr 2019 16:29:47 GMT
+- request:
+    method: put
+    uri: https://api.digitalocean.com/v2/domains/apex.com/records/69358909
+    body:
+      encoding: UTF-8
+      string: '{"type":"TXT","name":"_acme-challenge","data":"K5KaxiM0T-zUrFUGSzLq5l0P94nI4FoHabMeBVXgwwM","priority":null,"port":null,"ttl":null,"weight":null,"flags":null,"tag":null}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer abc
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 17 Apr 2019 16:29:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd442aaf18de5f2f2dd62a89c36fa58391555518587; expires=Thu, 16-Apr-20
+        16:29:47 GMT; path=/; domain=.digitalocean.com; HttpOnly
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"e15727a623efbdd3fb60ef6d53de323a"
+      Ratelimit-Limit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4988'
+      Ratelimit-Reset:
+      - '1555515468'
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gateway:
+      - Edge-Gateway
+      X-Request-Id:
+      - 35d7d736-cf12-4891-9b44-274466708fc4
+      X-Response-From:
+      - service
+      X-Runtime:
+      - '0.284288'
+      X-Xss-Protection:
+      - 1; mode=block
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4c8fc7a5a9c3ccd0-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"domain_record":{"id":69358909,"type":"TXT","name":"_acme-challenge","data":"K5KaxiM0T-zUrFUGSzLq5l0P94nI4FoHabMeBVXgwwM","priority":null,"port":null,"ttl":1800,"weight":null,"flags":null,"tag":null}}'
+    http_version: 
+  recorded_at: Wed, 17 Apr 2019 16:29:48 GMT
+recorded_with: VCR 4.0.0

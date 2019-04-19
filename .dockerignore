@@ -1,0 +1,7 @@
+**/acme_client_wrapper/coverage/
+**/acme_client_wrapper/spec/
+**/acme_client_wrapper/.rspec
+**/acme_client_wrapper/.ruby-version
+**/.gitignore
+**/example.Dockerfile
+**/README.md
