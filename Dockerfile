@@ -38,10 +38,10 @@ WORKDIR /srv/app
 COPY ./acme_client_wrapper/Gemfile ./acme_client_wrapper/Gemfile.lock /srv/app/
 RUN bundle install --without development test
 COPY ./acme_client_wrapper/lib /srv/app/lib/ 
-COPY ./acme_client_wrapper/init.rb /srv/app 
-RUN mv init.rb init
-RUN ln -s $PWD/init /usr/local/bin/
-RUN chmod +x init
+COPY ./acme_client_wrapper/kanayo.rb /srv/app 
+RUN mv kanayo.rb kanayo
+RUN ln -s $PWD/kanayo /usr/local/bin/
+RUN chmod +x kanayo
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
