@@ -1,5 +1,5 @@
 require "openssl"
-require "acme_client/notification"
+require_relative "./notification"
 
 module DockerizedAcmeClient
   class FileCreator

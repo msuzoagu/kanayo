@@ -1,5 +1,5 @@
 require "openssl"
-require "acme_client/file_creator"
+require_relative "../../lib/file_creator"
 
 RSpec.describe DockerizedAcmeClient::FileCreator do 
   subject(:file_creator) { DockerizedAcmeClient::FileCreator.new }

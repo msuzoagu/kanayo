@@ -1,10 +1,10 @@
-require 'yaml'
-require 'openssl'
-require 'acme-client'
-require 'acme_client/notification'
-require 'acme_client/file_creator'
-require 'acme_client/configuration'
-require 'acme_client/cloud_provider'
+require "yaml"
+require "openssl"
+require "acme-client"
+require_relative "./notification"
+require_relative "./file_creator"
+require_relative "./configuration"
+require_relative "./cloud_provider"
 
 module DockerizedAcmeClient
   class Wrapper

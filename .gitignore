@@ -1,3 +1,4 @@
 .env
 .DS_Store
-acme_client_wrapper/coverage
+.ruby-version
+coverage

@@ -1,5 +1,5 @@
 require 'find'
-require "acme_client/notification"
+require_relative "./notification"
 
 module DockerizedAcmeClient
   module Configuration
@@ -86,6 +86,10 @@ module DockerizedAcmeClient
         Dir.children(configuration_directory).find { |is_csr_pem| is_csr_pem[/(certificate.key$)/] }
       end
 
+      def find_account_key
+        Dir.children(configuration_directory).find { |is_acct_pem| is_acct_pem[/(account.key$)/] }
+      end
+      
       def error_in_yaml?
         email_is_absent || provider_is_invalid || domain_is_absent
       end
@@ -119,10 +123,6 @@ module DockerizedAcmeClient
         domains == nil || 
         domains.include?(nil) == true || 
         domains.count == 0
-      end
-
-      def find_account_key
-        Dir.children(configuration_directory).find { |is_acct_pem| is_acct_pem[/(account.key$)/] }
       end
   end
 end
