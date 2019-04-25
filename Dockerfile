@@ -34,51 +34,6 @@ RUN set -eux; \
   gosu nobody true
 ########################################################################################################################
 
-# WORKDIR /srv/app
-# COPY ./acme_client_wrapper/Gemfile ./acme_client_wrapper/Gemfile.lock /srv/app/
-# RUN bundle install --without development test
-# COPY ./acme_client_wrapper/lib /srv/app/lib/ 
-# COPY ./acme_client_wrapper/kanayo.rb /srv/app 
-# RUN mv kanayo.rb kanayo
-# RUN ln -s $PWD/kanayo /usr/local/bin/
-# RUN chmod +x kanayo
-
-# COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-# RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
-
-# WORKDIR /usr/local/bin/acme_client
-# COPY ./acme_client_wrapper/Gemfile ./acme_client_wrapper/Gemfile.lock /usr/local/bin/acme_client/
-# RUN bundle install --without development test
-# COPY ./acme_client_wrapper/lib /usr/local/bin/acme_client/ 
-# COPY ./acme_client_wrapper/kanayo.rb /usr/local/bin/acme_client/
-# RUN mv kanayo.rb kanayo
-# RUN ln -s $PWD/kanayo /usr/local/bin/
-# RUN chmod +x kanayo
-
-# COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-# RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
-
-# WORKDIR /usr/local/bin
-# COPY ./acme_client_wrapper/Gemfile ./acme_client_wrapper/Gemfile.lock /usr/local/bin/
-# RUN bundle install --without development test
-# COPY ./acme_client_wrapper/lib /usr/local/bin/
-# COPY ./acme_client_wrapper/kanayo.rb /usr/local/bin/
-# RUN mv kanayo.rb kanayo
-# RUN chmod +x kanayo
-
-# COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-# RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
-
-
 WORKDIR /srv/app
 COPY ./Gemfile ./Gemfile.lock /srv/app/
 RUN bundle install --without development test

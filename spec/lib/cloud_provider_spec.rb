@@ -101,20 +101,20 @@ RSpec.describe DockerizedAcmeClient::CloudProvider do
         end       
       end
 
-      # context 'when TXT record' do 
-      #   it 'does not call hostname_check', vcr: {cassette_name: 'provider/do/update_txt_for_cname'} do 
-      #     expect(provider).to_not receive(:hostname_check)
-      #     provider.add_txt_values_for(domain, update_txt)        
-      #   end
+      context 'when TXT record' do 
+        it 'does not call hostname_check', vcr: {cassette_name: 'provider/do/update_txt_for_cname'} do 
+          expect(provider).to_not receive(:hostname_check)
+          provider.add_txt_values_for(domain, update_txt)        
+        end
 
-      #   it 'updates txt record', vcr: {cassette_name: 'provider/do/update_txt_for_cname'} do 
-      #     expect(provider.add_txt_values_for(domain, update_txt)[:data]).to eq(update_txt[:record_data])      
-      #   end 
+        it 'updates txt record', vcr: {cassette_name: 'provider/do/update_txt_for_cname'} do 
+          expect(provider.add_txt_values_for(domain, update_txt)[:data]).to eq(update_txt[:record_data])      
+        end 
 
-      #   it 'does not raise_error', vcr: {cassette_name: 'provider/do/update_txt_for_cname'} do 
-      #     expect{provider.add_txt_values_for(domain, update_txt)}.to_not raise_error   
-      #   end
-      # end
+        it 'does not raise_error', vcr: {cassette_name: 'provider/do/update_txt_for_cname'} do 
+          expect{provider.add_txt_values_for(domain, update_txt)}.to_not raise_error   
+        end
+      end
     end
 
     # FQDN is a domain name that includes a hostname eg: www.yahoo.com
