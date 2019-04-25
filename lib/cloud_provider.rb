@@ -1,7 +1,7 @@
 require 'droplet_kit'
 require 'public_suffix'
-require 'acme_client/notification' 
-require 'acme_client/configuration'
+require_relative './notification' 
+require_relative './configuration'
 
 module DockerizedAcmeClient
   class CloudProvider

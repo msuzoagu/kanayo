@@ -1,8 +1,8 @@
 require "support/vcr_helper"
-require "acme_client/wrapper"
 require "shared/valid_context"
-require "acme_client/notification"
-require "acme_client/configuration"
+require_relative "../../lib/wrapper"
+require_relative "../../lib/notification"
+require_relative "../../lib/configuration"
 
 RSpec.describe DockerizedAcmeClient::Wrapper do 
   include_context :valid_context

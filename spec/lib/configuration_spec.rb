@@ -1,4 +1,4 @@
-require "acme_client/configuration"
+require_relative "../../lib/configuration"
 
 RSpec.describe DockerizedAcmeClient::Configuration do 
 

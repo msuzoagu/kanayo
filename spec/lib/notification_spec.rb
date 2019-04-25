@@ -1,4 +1,4 @@
-require "acme_client/notification"
+require_relative "../../lib/notification"
 
 RSpec.describe DockerizedAcmeClient::Notification do 
 

@@ -1,6 +1,6 @@
-require 'support/vcr_helper'
-require 'shared/valid_context'
-require 'acme_client/cloud_provider'
+require "support/vcr_helper"
+require "shared/valid_context"
+require_relative "../../lib/cloud_provider"
 
 RSpec.describe DockerizedAcmeClient::CloudProvider do 
   include_context :valid_context

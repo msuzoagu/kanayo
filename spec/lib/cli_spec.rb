@@ -1,4 +1,4 @@
-require "cli"
+require_relative "../../lib/cli"
 require "shared/valid_context"
 require "shared/invalid_context"
 

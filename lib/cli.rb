@@ -1,7 +1,7 @@
 require "thor"
-require "acme_client/wrapper"
-require "acme_client/configuration"
-require "acme_client/notification"
+require_relative "./wrapper"
+require_relative "./configuration"
+require_relative "./notification"
 
 class Cli < Thor 
   include DockerizedAcmeClient::Notification
